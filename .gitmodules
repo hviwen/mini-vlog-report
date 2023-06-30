@@ -1,0 +1,3 @@
+[submodule "example/utils/vLog"]
+	path = example/utils/vLog
+	url = git@github.com:hviwen/vlog-core.git

@@ -17,8 +17,20 @@
 
 
 ## 如何使用
+
+#### 装载
+
+1. 推荐使用 ***git submodule add***的方式来载入到程序中
+
+```shell
+git submodule add git@github.com:hviwen/vlog-core.git utils/vLog
+```
+
+#### 使用
+
 ```javascript
-import {vLog} from 'mini-vlog-report'
+import vLog from "../../utils/vLog/index.js"; // 注意你的文件目录层级
+
 
 vLog.log('vLog log信息 不上报')
 vLog.info('vLog info信息 不上报')
