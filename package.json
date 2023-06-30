@@ -1,0 +1,26 @@
+{
+  "name": "mini-vlog-report",
+  "version": "1.0.0",
+  "description": "小程序weData上报工具，优化的console，结构化日志",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hviwen/mini-vlog-report.git"
+  },
+  "keywords": [
+    "mini-program",
+    "console",
+    "report",
+    "wedata",
+    "utils"
+  ],
+  "author": "huiwen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hviwen/mini-vlog-report/issues"
+  },
+  "homepage": "https://github.com/hviwen/mini-vlog-report#readme"
+}
