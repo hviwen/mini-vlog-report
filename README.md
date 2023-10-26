@@ -5,6 +5,7 @@
 # mini-vlog-report [小程序实时日志上报]
 
 -----------------
+简体中文 | [English](./README-EN.md)
 
 ## 这是什么？
 
@@ -12,9 +13,8 @@
 同时优化了console的使用，将更醒目的配色配置到不同类型的日志输出上，并提供了可定制的样式能力。
 上报只需要通过调用 **.report()** 方法即可实现。同时可以在微信小程序后台WeData查看上报内容。
 
->ps：单条日志最大长度是3000字节
-> 
-
+> ps：单条日志最大长度是3000字节
+>
 
 ## 如何使用
 
@@ -31,48 +31,31 @@ git submodule add git@github.com:hviwen/vlog-core.git utils/vLog
 ```javascript
 import vLog from "../../utils/vLog/index.js"; // 注意你的文件目录层级
 
-
-vLog.log('vLog log信息 不上报')
-vLog.info('vLog info信息 不上报')
-vLog.warn('vLog 警告信息 不上报')
-vLog.error('vLog 错误信息 不上报')
-
-vLog('直接用 不上报')
-
-vLog('直接用', '多组', [1, 3, 4], false, '多类型','不上报')
-
-vLog('直接用', '多组', [1, 3, 4], false, '多类型','不上报')
-
-/**
- * 事件上报
- * name: reportWeData 固定值
- * eventName：reportEventName.※ 枚举类型 ✲ps: 需自定义✲
- * info: 事件上报内容 Object类型
- * 
- */
-vLog({name: 'reportWeData', eventName: reportEventName.BI_wx_login, info: {key: 'Value'}})
-
-/**
- * 日志上报
- * 调用 .report()方法
- * 
- */
-vLog.info('vLog ORIGIN qs.parse(options) >>>>', qs.parse(options)).report()
-
-/**
- * 过滤关键字，最多不超过1Kb，可以在小程序管理后台根据设置的内容搜索得到对应的日志。
- */
-vLog.setFilterMsg('openid')
-
-/**
- * 是setFilterMsg的添加接口。用于设置多个过滤关键字。
- */
-vLog.addFilterMsg('wechatInfoId')
+vLog.log('拥有console的所有用法')
+vLog.log('同console.log使用 不做上报')
+vLog.info('同console.info使用 不做上报')
+vLog.log('report start', '第一个参数在控制台会有颜色输出').report()
+vLog.log('obj test ', {a: 1, b: 2, c: 3}).report()
+vLog.info('info', 1234, 'abc', that).report()
+vLog.warn('warn', 123, '警告').report()
+vLog.error('error', '错误').report()
+vLog.log(null)
+vLog.log(undefined)
+vLog.log(NaN)
 
 ```
 
+#### 效果
+
+<div align="center" style="display: flex">
+<img src="./image/page_02.png" style="max-height: 80px;margin-right: 10px" /><br/>
+<img src="./image/page_01.jpg" style="max-height: 80px" /><br/>
+<img src="./image/page_03.png" style="max-height: 80px;margin-left: 10px" /><br/>
+</div>
+
 ## 计划完善
-- [] 单条日志超过3k字节的拆分成多个 批次提交
-- [] 提供自定义日志类型能力
+
+- [√] 单条日志超过3k字节的拆分成多个 批次提交
+- [√] 提供自定义日志类型能力
 
 
