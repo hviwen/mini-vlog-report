@@ -28,6 +28,7 @@ Page({
 	},
 
 	onShow() {
+		const that = this
 		vLog.log('拥有console的所有用法')
 		vLog.log('同console.log使用 不做上报')
 		vLog.info('同console.info使用 不做上报')

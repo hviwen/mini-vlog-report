@@ -23,8 +23,9 @@
 1. 推荐使用 ***git submodule add***的方式来载入到程序中
 
 ```shell
-git submodule add git@github.com:hviwen/vlog-core.git utils/vLog
+git submodule add git@github.com:hviwen/vlog-core.git YOUR_FILE_PATH
 ```
+> ps: YOUR_FILE_PATH 是你的项目中的文件路径，比如：utils/vLog
 
 #### 使用
 
@@ -36,7 +37,7 @@ vLog.log('同console.log使用 不做上报')
 vLog.info('同console.info使用 不做上报')
 vLog.log('report start', '第一个参数在控制台会有颜色输出').report()
 vLog.log('obj test ', {a: 1, b: 2, c: 3}).report()
-vLog.info('info', 1234, 'abc', that).report()
+vLog.info('info', 1234, 'abc', this).report()
 vLog.warn('warn', 123, '警告').report()
 vLog.error('error', '错误').report()
 vLog.log(null)

@@ -20,8 +20,9 @@ English | [简体中文](./README.md)
 1. It is recommended to use ***git submodule add*** to add it to your project:
 
 ```shell
-git submodule add git@github.com:hviwen/vlog-core.git utils/vLog
+git submodule add git@github.com:hviwen/vlog-core.git YOUR_FILE_PATH
 ```
+> ps: YOUR_FILE_PATH is the file path in your project, for example：utils/vLog
 
 #### Usage
 
@@ -33,7 +34,7 @@ vLog.log('Same as console.log, no reporting')
 vLog.info('Same as console.info, no reporting')
 vLog.log('report start', 'The first parameter has a color output in the console').report()
 vLog.log('obj test ', {a: 1, b: 2, c: 3}).report()
-vLog.info('info', 1234, 'abc', that).report()
+vLog.info('info', 1234, 'abc', this).report()
 vLog.warn('warn', 123, 'Warning').report()
 vLog.error('error', 'Error').report()
 vLog.log(null)
