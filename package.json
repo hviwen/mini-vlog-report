@@ -1,10 +1,14 @@
 {
   "name": "mini-vlog-report",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "小程序weData上报工具，优化的console，结构化日志",
-  "main": "main.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "browser": "dist/index.min.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build && npm run build:types",
+    "build:types": "node scripts/buildTypes.mjs"
   },
   "repository": {
     "type": "git",
@@ -17,10 +21,18 @@
     "wedata",
     "utils"
   ],
+  "files": [
+    "dist"
+  ],
   "author": "huiwen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hviwen/mini-vlog-report/issues"
   },
-  "homepage": "https://github.com/hviwen/mini-vlog-report#readme"
+  "homepage": "https://github.com/hviwen/mini-vlog-report#readme",
+  "devDependencies": {
+    "dts-bundle-generator": "^9.5.1",
+    "vite": "^5.2.10",
+    "vite-plugin-banner": "^0.7.1"
+  }
 }

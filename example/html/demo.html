@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <div><span>vLog test</span></div>
+</header>
+<script src="../../dist/index.min.js"></script>
+
+<script>
+  vLog.log('拥有console的所有用法')
+  vLog.log('同console.log使用 不做上报')
+  vLog.info('同console.info使用 不做上报')
+  vLog.log('report start', '第一个参数在控制台会有颜色输出').report()
+  vLog.log('obj test ', {a: 1, b: 2, c: 3}).report()
+  vLog.info('info', 1234, 'abc', this).report()
+  vLog.warn('warn', 123, '警告').report()
+  vLog.error('error', '错误').report()
+  vLog.log(null)
+  vLog.log(undefined)
+  vLog.log(NaN)
+</script>
+</body>
+</html>
