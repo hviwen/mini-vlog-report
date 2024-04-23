@@ -1,6 +1,6 @@
 {
   "name": "mini-vlog-report",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "小程序weData上报工具，优化的console，结构化日志",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

@@ -17,17 +17,20 @@ English | [简体中文](./README.md)
 
 #### Installation
 
-1. It is recommended to use ***git submodule add*** to add it to your project:
-
+- npm
 ```shell
-git submodule add git@github.com:hviwen/vlog-core.git YOUR_FILE_PATH
+npm install mini-vlog-report --save
 ```
-> ps: YOUR_FILE_PATH is the file path in your project, for example：utils/vLog
+
+- pnpm
+```shell
+pnpm install mini-vlog-report --save
+```
 
 #### Usage
 
 ```javascript
-import vLog from "../../utils/vLog/index.js"; // Adjust the file path based on your project structure
+import vLog from "mini-vlog-report";
 
 vLog.log('All the functionalities of console.log')
 vLog.log('Same as console.log, no reporting')
@@ -40,7 +43,6 @@ vLog.error('error', 'Error').report()
 vLog.log(null)
 vLog.log(undefined)
 vLog.log(NaN)
-
 ```
 
 #### Example Output
@@ -55,6 +57,7 @@ vLog.log(NaN)
 
 - [√] Split logs that exceed 3KB into multiple batches for submission.
 - [√] Provide the ability to customize log types.
+- []  Log reporting in non-WeChat applet scenarios (default platform)
 
 
 Translated the above content into English.

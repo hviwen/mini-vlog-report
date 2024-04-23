@@ -20,17 +20,20 @@
 
 #### 装载
 
-1. 推荐使用 ***git submodule add***的方式来载入到程序中
-
+- npm
 ```shell
-git submodule add git@github.com:hviwen/vlog-core.git YOUR_FILE_PATH
+npm install mini-vlog-report --save
 ```
-> ps: YOUR_FILE_PATH 是你的项目中的文件路径，比如：utils/vLog
+
+- pnpm 
+```shell
+pnpm install mini-vlog-report --save
+```
 
 #### 使用
 
 ```javascript
-import vLog from "../../utils/vLog/index.js"; // 注意你的文件目录层级
+import vLog from "mini-vlog-report";
 
 vLog.log('拥有console的所有用法')
 vLog.log('同console.log使用 不做上报')
@@ -43,7 +46,6 @@ vLog.error('error', '错误').report()
 vLog.log(null)
 vLog.log(undefined)
 vLog.log(NaN)
-
 ```
 
 #### 效果
@@ -58,5 +60,5 @@ vLog.log(NaN)
 
 - [√] 单条日志超过3k字节的拆分成多个 批次提交
 - [√] 提供自定义日志类型能力
-
+- [] 非微信小程序场景下的日志上报（默认平台）
 
